@@ -1,0 +1,117 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"D:\wamp\www\ChildrenGardenLocate\public/../application/admin\view\admin\index.html";i:1483513742;}*/ ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>游乐园智能腕表监管系统</title>
+	</head>
+	<link rel="stylesheet" href="/static/css/mycss.css" />
+	<style>
+		html, body{height: 100%; }
+		* {margin:0; padding:0; list-style:none; font-family: "微软雅黑";} 
+		.header{ width:100%;height:20%;background-image: url(/static/img/bg_header.jpg);background-size: 100% 100%;} 
+		.h_top,.h_bottom{width: 100%;height: 50%;position: relative;}
+		.h_font{width: 80%;float: left;line-height: 200%;font-size: 25px;}
+		.h_exit{width: 20%;float: left;line-height: 300%;font-size: 16px;text-align: center;}
+		.h_bottom_left{width: 200px;height: 100%;position:absolute; left:0;z-index:1}
+		.h_bottom_nav{width:100%; height:100%;position:absolute; left:0;}
+		.nav{height:100%;margin-left:200px;}
+		.nav_ul{width: 100%;height: 100%;}
+		.nav_ul li{float: left;width: 20%;text-align: center;position: relative;top: 40%;font-size: 18px;font-weight: 700;}
+		.wrapper {width: 100%;height: 80%;} 
+		.left {width:200px; height:80%;border-right:2px solid white;background-image: url(/static/img/bg_left.jpg);background-size: 100% 100%; position:absolute; left:0;z-index:1;} 
+		.c_left_search{width: 100%;height: 20%;border-bottom: 2px solid white;}
+		.input_serach{width: 90%;margin-left: 5%;height: 30%;top: 7%;position: relative;outline: none;-webkit-appearance: none;border: 1px solid black ;border-radius: 7px;font-size: 16px;text-align: center;}
+		.input_show{width: 100%;height: 50%;margin-top: 6%;}
+		.input_show li{margin-left: 5%;}
+		.c_left_list{width: 100%;height: 79%;overflow-y: auto;}
+		p{display: block;width: 50%;float: left;text-align: center;}
+		.right {width:100%; height:80%;background:cornflowerblue; position:absolute; left:0;} 
+		.content {height:100%;margin-left:202px;} 
+		.showContent{width: 100%;height: 100%;background-image: url(/static/img/bg_content.jpg);background-size: 100% 100%;border: 0;}
+		a:link{
+			text-decoration: none;
+			color: black;
+			}
+			a:visited{
+				text-decoration: none;
+				color: black;
+			}
+			a:hover{
+				text-decoration: none;
+				
+				color:white;
+			}
+			a:active{
+				text-decoration: none;
+				color: white;
+			}
+	</style> 
+</head> 
+<body> 
+	<div class="header"> 
+		<div class="h_top">
+			<div class="h_font">儿童游乐园智能腕表登记系统</div>
+			<div class="h_exit"><span class="hand" id="exit">退出登录</span></div>
+		</div>
+		<div class="h_bottom">
+			<div class="h_bottom_left"></div>
+			<div class="h_bottom_nav">
+				<div class="nav">
+					<ul class="nav_ul">
+						<li><a href="map.html" target="showContent">首页</a></li>
+						<li><a href="watchBind.html" target="showContent">腕表绑定</a></li>
+						<li><a href="watchUnbind.html" target="showContent">腕表解绑</a></li>
+						<li><a href="GPSlocation.html" target="showContent">GPS定位</a></li>
+						<li><a href="messageDispose.html" target="showContent">信息处理</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper"> 
+		<div class="left"> 
+			<div class="c_left_search">
+				<input class="input_serach" id="search_id" placeholder="输入编号搜索" />
+				<div class="input_show hand" id="msg_area">
+					<li>编号：0001</li>
+					<li>电话：13688369875</li>
+				</div>
+			</div>
+			<div class="c_left_list">
+				<p>0001</p>
+				<p>0002</p>
+				<p>0003</p>
+			</div>
+		</div> 
+		<div class="right"> 
+			<div class="content"> 
+				<iframe id="ifromeContent" class="showContent" name="showContent" src="map.html" ></iframe>
+			</div> 
+		</div>
+	</div> 
+	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript">
+		//点击搜索的结果进入详情（解绑）页面
+		$("#msg_area").on("click",function(){
+			$("#ifromeContent").attr("src","watchUnbind.html");
+		})
+		//enter键搜索结果展示
+		$("#search_id").on("keyup",function(event){
+			var event = event || window.event; 
+		    if(event.keyCode==13){
+		    	var searchVal = $("#search_id").val();
+		    	alert(searchVal);
+		  		
+		    }
+		})
+		//退出登录
+		$("#exit").on("click",function(){
+			if(confirm('你确定要退出登录？')){
+				window.location.href="<?php echo url('login/outlogin'); ?>";
+			}
+			
+		});
+	</script>
+</body> 
+</html> 

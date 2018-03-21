@@ -1,0 +1,399 @@
+﻿<?php
+date_default_timezone_set("PRC");
+Class WS {
+	var $master;  // 连接 server 的 client
+	var $sockets = array(); // 不同状态的 socket 管理
+	var $handshake = false; // 判断是否握手
+
+	function __construct($address, $port){
+		//连接数据库
+		$pdo=new PDO('mysql:host=localhost;dbname=ChildrenGardenLocate','root','123321',array(PDO::ATTR_PERSISTENT => true));
+		// 建立一个 socket 套接字
+		$this->master = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)
+		or die("socket_create() failed");
+		socket_set_option($this->master, SOL_SOCKET, SO_REUSEADDR, 1)
+		or die("socket_option() failed");
+		socket_bind($this->master, $address, $port)
+		or die("socket_bind() failed");
+		socket_listen($this->master, 200)
+		or die("socket_listen() failed");
+		//$this->sockets[] = $this->master;
+		array_push($this->sockets, $this->master);
+
+		while(true) {
+			//自动选择来消息的 socket 如果是握手 自动选择主机
+			$write = NULL;
+			$except = NULL;
+			$socket_changes = $this->sockets;
+			socket_select($socket_changes, $write, $except, NULL) or die("socket_select() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+			foreach ($socket_changes as $key=>$socket) {
+				//连接主机的 client
+				if ($socket == $this->master){
+					$client = socket_accept($this->master) or die("socket_accept() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+					if ($client < 0) {
+						// debug
+						echo "socket_accept() failed";
+						continue;
+					} else {
+						//connect($client);
+						array_push($this->sockets, $client);
+						echo "connect client\n";
+					}
+				} else {
+					$bytes = @socket_recv($socket,$buf,2048,0);
+					if($bytes == 0){
+						//return;
+						//socket_close($socket);
+						$k = array_search($socket, $this->sockets);
+						socket_close($socket);
+						//unset($this->sockets[$k]);
+						array_splice($this->sockets, $k, 1);
+						echo "close socket:".$k."\n";;
+						continue;
+					} 
+					if (!$this->handshake) {
+						// 如果没有握手，先握手回应
+						//doHandShake($socket, $buf);
+						$this->handshake=true;
+						echo "shakeHands\n";
+					} else {
+						// 如果已经握手，直接接受数据，并处理
+						//$buf = decode($buf);
+						//process($socket, $buf);
+						echo date("Y-m-d H:i:s",time())."\n";
+						echo "Received msg: $buf   \n";
+						$arr=explode(',',$buf);
+						$arr1=explode('*',$arr[0]);
+						$password='mybhkj@ncyely@wyy_20170102150500';
+						$cs=substr($arr1[0],1);//厂商
+						$shebei=$arr1[1];//设备
+						$lsh=$arr1[2];//流水号
+						$xyml=$arr1[4];//协议命令
+						
+						$substr=substr($arr[0], 1);//去掉【的协议命令
+						$endsubstr=rtrim(end($arr),']');//发过来的密码
+						//超级管理员的电话
+						$type=1;
+						$sql30="select username from admin where type=:type";
+						$pdoStatment=$pdo->prepare($sql30);
+						$pdoStatment->bindParam(':type',$type);
+						$pdoStatment->execute();
+						$admin=$pdoStatment->fetch();
+						$admin_phone=$admin['username'];
+							
+						//获取所有工作的保安的电话
+						$sql88="select b_phone from security where type=:type";
+						$pdoStatment=$pdo->prepare($sql88);
+						$pdoStatment->bindParam(':type',$type);
+						$pdoStatment->execute();
+						$phones=$pdoStatment->fetchAll();
+						$sec_phone='';//保安的电话
+						if(!empty($phones)){
+							foreach($phones as $phone){
+								$sec_phone.=','.$phone['b_phone'];
+							}
+						}
+							
+						/**
+						 * 初始化init
+						 */
+						if($xyml=='INIT'){
+							if($endsubstr==Lowermd5($substr.$password)){
+								//连接数据库做一些操作
+								$sql="select id,cmd_num from watch where wbid=:wbid";
+								$pdoStatment=$pdo->prepare($sql);//通知mysql做准备返回pdostatement的类对象
+								$pdoStatment->bindParam(':wbid',$shebei);
+								$check=$pdoStatment->execute();//执行准备好的sql语句成功返回true
+								//数据传送 向客户端写入返回结果
+								$row=$pdoStatment->fetch();
+								$len=sprintf("%04d", dechex(23));//转换成四位十六进制的数
+								$verify=Lowermd5($cs.'*'.$shebei.'*'.$lsh.'*'.$len.'*'.$xyml.$password);//我传过去的验证码
+								//echo "begin:";
+								//echo $row['id'];
+								//echo "end";
+								$checktime=date('Y-m-d H:i:s');
+								file_put_contents('a.txt',$checktime.':'.var_export($row).';'.$sec_phone.';id='.$row['id'].';设备=》'.$shebei.".\n", FILE_APPEND );
+								if($row['id']){
+									//更新腕表里面的腕表电话
+									$sql100="update watch set wb_phone=:wb_phone where id=:id";
+									$pdoStatment=$pdo->prepare($sql100);
+									$pdoStatment->bindParam(':wb_phone',$arr[1]);
+									$pdoStatment->bindParam(':id',$row['id']);
+									$pdoStatment->execute();
+									$msg = "[".$cs.'*'.$shebei.'*'.$lsh.'*'.$len.'*'.$xyml.",1,".$verify."]\n";
+								}else{
+						
+									$msg = "[".$cs.'*'.$shebei.'*'.$lsh.'*'.$len.'*'.$xyml.",0,".$verify."]\n";
+								}
+								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+// 								if($row['id']){
+// 									//设置腕表set命令这是临时加的改变腕表的发送定位时间
+// 									$wb_phone=$arr[1];//腕表电话
+// 									$len1=sprintf("%04d",$row['cmd_num']);//转换成四位十六进制的数
+// 									$number=$len1;//次数流水号
+// 									$shezhi='F48';//设置项
+// 									$en_time='08:00-11:30|14:00-16:30|12345';//上课禁用时间段
+// 									$kai_time="06:05";//开机时间
+// 									$close_time="23:00";//关机时间
+// 									$l_time='10';//亮屏时间
+// 									$language='2';//语言1英语 2简体中文 3繁体中文
+// 									$area='480';//时区时区 偏移的分钟数 UTC+8：00 为 480，UTC-7:00 为 -420
+// 									$bulb='0';//指示灯，0常灭,1常亮,2,闪烁
+// 									$period1="0:12345";//闹钟周期1
+// 									$period2="0:0";//闹钟周期2
+// 									$period3="0:12345";//闹钟周期3
+// 									$alarm_time1="06:30";//闹钟时间1
+// 									$alarm_time2="00:00";//闹钟时间2
+// 									$alarm_time3="00:00";//闹钟时间3
+// 									$d_moshi="1";//定位模式，0，1
+// 									$d_time=30;//发送定位时间
+// 									$a1='';
+// 									$a2='';
+// 									$a3='';
+// 									$a4='';
+// 									$a5='';
+// 									$a6='宝贝';//手表宝贝名称
+// 									$str='SET,'.$wb_phone.','.$number.','.$shezhi.','.$en_time.','.$kai_time.','.$close_time.','.$l_time.','.$language.','.$area.','.$bulb.','.$period1.','.$period2.','.$period3.','.$alarm_time1.','.$alarm_time2.','.$alarm_time3.','.$d_moshi.','.$d_time.','.$a1.','.$a2.','.$a3.','.$a4.','.$a5.','.$a6;
+// 									$c_len=strlen($str)+16;//内容长度
+// 									$content_len=sprintf("%04d", dechex($c_len));//转换成四位十六进制的数
+// 									$verifycode=Lowermd5("YW*$shebei*$number*$content_len*SETmybhkj@ncyely@wyy_20170102150500");//验证密码
+// 									$msg="[YW*$shebei*$number*$content_len*".$str.','.$verifycode."]\n";//传输的数据
+// 									socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+// 									//更新流水号
+// 									$liushuihao=$row['cmd_num']+1;
+// 									if($liushuihao>9999){
+// 										$liushuihao=1;
+// 									}
+// 									$sql110="update watch set cmd_num=:cmd_num where id=:id";
+// 									$pdoStatment=$pdo->prepare($sql110);
+// 									$pdoStatment->bindParam(':cmd_num',$liushuihao);
+// 									$pdoStatment->bindParam(':id',$row['id']);
+// 									$pdoStatment->execute();
+// 								}
+													
+							}else{
+								//数据传送 向客户端写入返回结果
+								$msg = "password fase! \n";
+								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+							}
+						}
+						/**
+						 * 链路保持LK（心跳包）
+						 */
+						if($xyml=='LK'){
+							if($endsubstr==Lowermd5($substr.$password)){
+								//数据传送 向客户端写入返回结果
+								date_default_timezone_set("Etc/GMT");
+								$len=sprintf("%04d", dechex(39));//转换成四位十六进制的数
+								$time=date("Y-m-d,H:i:s",time());
+								$verify=Lowermd5($cs.'*'.$shebei.'*'.$lsh.'*'.$len.'*'.$xyml.$password);//我传过去的验证码
+						
+								$msg ="[".$cs.'*'.$shebei.'*'.$lsh.'*'.$len.'*'.$xyml.",$time,".$verify."]\n";
+								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+							}else{
+								$msg = "password fase! \n";
+								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+							}
+						}
+						/**
+						 * 3.位置数据上报
+						 */
+						if($xyml=='UD'){
+							if($endsubstr==Lowermd5($substr.$password)){
+								$a=17+$arr[17]*3+3+1;//获取wifi数组的键名
+								$latitude=$arr[4];//纬度
+								$longitude=$arr[6];//经度
+								//wb上传ud信息时间
+								$now_time=time();
+								$is_wifi=$arr[$a]==0?0:1;
+								$sqlwb_time="insert into wbtime (wbid,up_ud_time,is_wifi) values (?,?,?)";
+								$pdoStatment=$pdo->prepare($sqlwb_time);
+								$pdoStatment->bindParam(1,$shebei);
+								$pdoStatment->bindParam(2,$now_time);
+								$pdoStatment->bindParam(3,$is_wifi);
+								$pdoStatment->execute();
+								if($arr[$a]!=0){
+									/*$wifistrong=array();
+									for($i=1;$i<=$arr[$a];$i++){
+										$wifistrong[$a+$i*3]=$arr[$a+$i*3];
+									}
+									rsort($wifistrong);//降序排列
+									
+									$index=array_keys($arr,$wifistrong[0]);*/
+									
+									$wifistrong=array();
+									for($i=1;$i<=$arr[$a];$i++){
+										$wifistrong[$a+$i*3-1]=strtoupper(str_replace(":", '',$arr[$a+$i*3-1]));
+									}
+									$index=key($wifistrong)+1;
+									//$row_mac=array("8ca6df1ad2b0","882593303192","8","e04fbdc72f89","4","5");
+									$sql_mac="select wifimac from wifi ";
+									$pdoStatment=$pdo->prepare($sql_mac);
+									$pdoStatment->execute();
+									$row_mac=$pdoStatment->fetchAll(PDO::FETCH_ASSOC);
+									foreach($row_mac as $row_mac1){
+										$row_array[]=$row_mac1['wifimac'];
+									}
+									foreach($wifistrong as $vvvv){
+										$xx=0;//判断一下这个mac地址是否数据库中存在
+										if(in_array($vvvv,$row_array)){
+											$xx=1;//存在
+											break;
+										}
+									}
+									if($xx==1){
+										foreach ($wifistrong as $wsk=>$wsv){
+											if(in_array($wsv, $row_array)){
+												$index=$wsk+1;
+												break;
+											}
+										}
+										//echo $index;
+										//操作数据库
+										$state=0;
+										$sql1="select id,w_phone from watchusage where state=:state and watchname=:watchname order by id desc limit 1";
+										$pdoStatment=$pdo->prepare($sql1);
+										$pdoStatment->bindParam(':watchname',$shebei);
+										$pdoStatment->bindParam(':state',$state);
+										$pdoStatment->execute();
+										$row=$pdoStatment->fetch();
+										$watchusage_id=$row['id'];
+										$phone=$row['w_phone'];//家长的电话
+										//插入腕表路径
+										$time=time();
+										$wifimacrep=str_replace(':','',$arr[$index-1]);
+										//$wifimac='70F'.strtoupper($wifimacrep);
+										$wifimac=strtoupper($wifimacrep);
+										//if(strstr($wifimac,'70F')){
+										//插入之前先判断上一条数据是否一模一样 一样不处理，或者插入新数据2107.4.12
+//										$sql_yanzhen="select watchusage_id,wifiname,wifimac from watchlocation where watchusage_id=:watchusage_id  order by id desc limit 1";
+//										$pdoStatment=$pdo->prepare($sql_yanzhen);
+//										$pdoStatment->bindParam(':watchusage_id',$watchusage_id);
+//										$pdoStatment->execute();
+//										$row_yanzhen=$pdoStatment->fetch();
+//										if($row_yanzhen['wifiname']==$arr[$index-2] && $row_yanzhen['wifimac']==$wifimac){
+//											echo "not update!\n";
+//										}else{
+											//新增
+											$sql2="insert into watchlocation (watchusage_id,wifiname,wifimac,wifistrong,time,longitude,latitude) values (?,?,?,?,?,?,?)";
+											$pdoStatment=$pdo->prepare($sql2);
+											$pdoStatment->bindParam(1,$watchusage_id);
+											$pdoStatment->bindParam(2,$arr[$index-2]);
+											$pdoStatment->bindParam(3,$wifimac);
+											$pdoStatment->bindParam(4,$arr[$index]);
+											$pdoStatment->bindParam(5,$time);
+											$pdoStatment->bindParam(6,$longitude);
+											$pdoStatment->bindParam(7,$latitude);
+											$c=$pdoStatment->execute();
+	//							}
+
+
+										//报警发送短信
+										$sql4="select iswarning,wifi_wz from wifi where wifimac=:wifimac";
+										$pdoStatment=$pdo->prepare($sql4);
+										$pdoStatment->bindParam(':wifimac',$wifimac);
+										$pdoStatment->execute();
+										$res=$pdoStatment->fetch();
+										$beginwarning=0;
+										if($res['iswarning']==1){//说明是报警wifi
+											$sql20="select wifiMac watch where wbid=:wbid";//获取原来的wifimac地址
+											$pdoStatment=$pdo->prepare($sql20);
+											$pdoStatment->bindParam(':wbid',$shebei);
+											$pdoStatment->execute();
+											$res1=$pdoStatment->fetch();
+
+											if($res1['wifiMac']==$wifimac){//相等，说明已经报过警了，直接更新
+												$sql21="update watch set wifiname=:wifiname,wifiMac=:wifiMac,wifistrong=:wifistrong,lasttime=:lasttime,lastwifimac=:lastwifimac,beginwarning=:beginwarning where wbid=:wbid";
+												$pdoStatment=$pdo->prepare($sql21);
+												$pdoStatment->bindParam(':wifiname',$arr[$index-2]);
+												$pdoStatment->bindParam(':wifiMac',$wifimac);
+												$pdoStatment->bindParam(':wifistrong',$arr[$index]);
+												$pdoStatment->bindParam(':lasttime',$time);
+												$pdoStatment->bindParam(':lastwifimac',$wifimac);
+												$pdoStatment->bindParam(':wbid',$shebei);
+												$pdoStatment->bindParam(':beginwarning',$beginwarning);
+												$pdoStatment->execute();
+											}else{
+												/**
+												 * 短信发送位置
+												 */
+												$smsapi="http://dx110.ipyy.net/sms.aspx";
+												$userid="123";//企业ID
+												$account="GYKJ002";//账号
+												$password=strtoupper(md5('GYKJ00236'));//密码
+												$mobile=$phone.$sec_phone.','.$admin_phone;//绑定人的电话，安保的电话，超级管理员的电话
+												$content="腕表:".$shebei."处于警报区域！！位置是：".$res['wifi_wz'].";请速速查看！！【游乐园】";//内容
+												$sendurl=$smsapi."?action=send&userid=".$userid."&account=".$account."&password=".$password."&mobile=".$mobile."&content=".$content."&sendTime=&extno=";
+												$result =file_get_contents($sendurl) ;//获得xml数据
+												$xml_arr=simplexml_load_string($result);//转换成数组
+												$send_time=date('Y-m-d H:i:s');
+												if($xml_arr->returnstatus=='Success'){
+													echo $send_time."send $mobile success! \n";
+												}else{
+													echo $send_time."send $mobile Faild! \n";
+												}
+												//更新腕表
+												$sql21="update watch set wifiname=:wifiname,wifiMac=:wifiMac,wifistrong=:wifistrong,lasttime=:lasttime,lastwifiname=:lastwifiname,beginwarning=:beginwarning where wbid=:wbid";
+												$pdoStatment=$pdo->prepare($sql21);
+												$pdoStatment->bindParam(':wifiname',$arr[$index-2]);
+												$pdoStatment->bindParam(':wifiMac',$wifimac);
+												$pdoStatment->bindParam(':wifistrong',$arr[$index]);
+												$pdoStatment->bindParam(':lasttime',$time);
+												$pdoStatment->bindParam(':lastwifiname',$arr[$index-2]);
+												$pdoStatment->bindParam(':wbid',$shebei);
+												$pdoStatment->bindParam(':beginwarning',$beginwarning);
+												$pdoStatment->execute();
+											}
+
+										}else{
+											//更新腕表的mac记录
+											$sql3="update watch set wifiname=:wifiname,wifiMac=:wifiMac,wifistrong=:wifistrong,lasttime=:lasttime,lastwifimac=:lastwifimac,beginwarning=:beginwarning  where wbid=:wbid";
+											$pdoStatment=$pdo->prepare($sql3);
+											$pdoStatment->bindParam(':wifiname',$arr[$index-2]);
+											$pdoStatment->bindParam(':wifiMac',$wifimac);
+											$pdoStatment->bindParam(':wifistrong',$arr[$index]);
+											$pdoStatment->bindParam(':lasttime',$time);
+											$pdoStatment->bindParam(':lastwifimac',$wifimac);
+											$pdoStatment->bindParam(':wbid',$shebei);
+											$pdoStatment->bindParam(':beginwarning',$beginwarning);
+											$pdoStatment->execute();
+										}
+									}else{
+										echo 'mac is unknown!';
+									}
+								}
+							}else{
+								$msg = "password fase! \n";
+								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+							}
+						}
+						/**
+						 * 设置全部参数指令
+						 */
+// 						if($xyml=='SET'){
+// 							if($endsubstr==Lowermd5($substr.$password)){
+// 								//数据传送 向客户端写入返回结果
+// 								if($arr[2]==1){
+// 									echo 'modify success!';
+// 								}else{
+// 									echo 'modify fail!';
+// 								}
+// 							}else{
+// 								$msg = "password fase! \n";
+// 								socket_write($socket, $msg, strlen($msg)) or die("socket_write() failed: reason: " . socket_strerror(socket_last_error()) ."/n");
+// 							}
+// 						}
+						
+					}
+				}
+			}
+		}
+	}
+}
+
+$ws = new WS('nc.galbs.cn', 2048);
+//获取小写16为MD5加密
+function Lowermd5($str){
+	$p_str=md5($str);
+	return substr($p_str,8,16);
+}

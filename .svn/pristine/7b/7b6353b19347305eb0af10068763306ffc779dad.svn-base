@@ -1,0 +1,175 @@
+[ 2017-04-17T14:48:22+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/newlist
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/newlist [运行时间：0.362021s][吞吐率：2.76req/s] [内存消耗：2,610.83kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'newlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ab02ee0b-e17a-4efc-9270-d524a0b7247f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------647399842596198389490587',
+  'content-length' => '273',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-17T14:48:30+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/newslist
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/newslist [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：3,573.52kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'newslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '2c64d0ad-a6fe-4b07-b467-f3d9bc7e21c9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------138877823266504632489091',
+  'content-length' => '273',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->newslist[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `news` ORDER BY id desc LIMIT 10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-17T14:49:18+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lunbo
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lunbo [运行时间：0.118007s][吞吐率：8.47req/s] [内存消耗：3,569.53kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lunbo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1e1db184-0e47-443f-b84d-30bedb4b9945',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------416109225629051166092535',
+  'content-length' => '273',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lunbo[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `lunbo` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `imageurl` FROM `lunbo` WHERE  `state` = 1 LIMIT 4 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-17T14:50:23+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.128007s][吞吐率：7.81req/s] [内存消耗：3,577.80kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e27a7b3c-a5db-451f-83c8-ba877f774a8b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------937637301750380081683596',
+  'content-length' => '273',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13076050636'  AND `state` = 0 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `longitude`,`latitude` FROM `watchlocation` WHERE  `watchusage_id` = 24 ORDER BY id desc LIMIT 10 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------

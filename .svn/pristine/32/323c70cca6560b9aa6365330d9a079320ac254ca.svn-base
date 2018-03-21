@@ -1,0 +1,16 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"D:\wamp\www\ChildrenGardenLocate\tp5\public/../application/admin\view\admin\map.html";i:1483496081;}*/ ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	    html,body{height: 100%;}
+	    *{margin: 0;padding: 0;}
+		.map{width: 100%;height: 100%;background-color: lightskyblue;}
+	</style>
+	<body>
+		<div class="map">游乐园室内图及功能展示区</div>
+	</body>
+</html>

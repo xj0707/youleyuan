@@ -1,0 +1,147 @@
+[ 2017-01-07T16:22:18+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/wbsearch
+[ log ] c.cn/admin/yly_Api_Controller/wbsearch [运行时间：0.292017s][吞吐率：3.42req/s] [内存消耗：3,541.31kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'wbsearch',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f8031e99-e1c9-4b22-9ad4-54ff920d3fce',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------465935575763865710744635',
+  'content-length' => '174',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'wbid' => '861900039990378',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->wbsearch[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063004s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `wbid` = '861900039990378' LIMIT 1 [ RunTime:0.016001s ]
+
+---------------------------------------------------------------
+[ 2017-01-07T16:22:59+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/wbbing
+[ log ] c.cn/admin/yly_Api_Controller/wbbing [运行时间：0.253014s][吞吐率：3.95req/s] [内存消耗：2,422.73kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'wbbing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'bd1cab82-610e-41ce-ab66-208dd2f6e619',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------862577379214340176259631',
+  'content-length' => '430',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'wbid' => '861900039990378',
+  'p_phone' => '13076050636',
+  'p_picurl' => '//www.baidu.com/img/bd_logo1.png',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->wbbing[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-07T16:23:10+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/wbbing
+[ log ] c.cn/admin/yly_Api_Controller/wbbing [运行时间：0.139008s][吞吐率：7.19req/s] [内存消耗：2,422.73kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'wbbing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c9a8a5fc-445e-4497-8191-c6fd02777ce6',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------291987150406128005412771',
+  'content-length' => '430',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'wbid' => '861900039990378',
+  'p_phone' => '13076050636',
+  'p_picurl' => '//www.baidu.com/img/bd_logo1.png',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->wbbing[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-07T16:23:18+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/login
+[ log ] c.cn/admin/yly_Api_Controller/login [运行时间：0.112007s][吞吐率：8.93req/s] [内存消耗：2,421.10kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b0ff22c8-cda9-404d-95e7-44e5ff60a2e3',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------470140786575240559739590',
+  'content-length' => '275',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->login[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

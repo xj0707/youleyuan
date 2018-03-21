@@ -1,0 +1,30 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : ChildrenGardenLocate
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-04-17 14:18:56
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for news
+-- ----------------------------
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `titile` varchar(255) DEFAULT NULL COMMENT '标题',
+  `image` varchar(255) DEFAULT NULL COMMENT '图片URL',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `content` text COMMENT '正文内容',
+  `time` int(11) DEFAULT NULL COMMENT '发布时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

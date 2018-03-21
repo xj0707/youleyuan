@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/mycss.css" />
+		<style>
+			html,body{width:100%;height: 100%;}
+	    	*{margin: 0;padding: 0;font-family: "微软雅黑";}
+	    	.msg_entering{width: 60%;height: 25px;position: relative;top: 80px;margin-left: 300px;margin-top: 15px;}	
+			.msg_entering1{width: 60%;height: 25px;position: relative;top: 80px;margin-left: 300px;margin-top: 6px;}	
+
+			.tishi{width: 100px;height: 25px;position: absolute;z-index: 1;left: 0;text-align: center;line-height: 25px;font-size: 18px;}
+			.tishi1{width: 316px;height: 25px;position: absolute;z-index: 1;left: 2px;text-align: center;line-height: 25px;font-size: 18px;border: 1px solid darkgrey;}
+			.msge_input_pos{width: 100%;height: 25px;position: absolute;}
+			.msg_input{margin-left:100px;height: 100%;width: 320px;outline: none;-webkit-appearance: none;border: 1px solid darkgrey ;border-radius: 5px;font-size: 16px;}
+			.msg_input1{cursor: pointer;margin-left:320px;height: 100%;width: 100px;outline: none;-webkit-appearance: none;border: 1px solid darkgrey ;border-radius: 5px;font-size: 16px;text-align: center;background-color: #FF8C00;}
+
+			.wrap{width: 100%;position: relative;}
+			.sure_bind{width: 320px;height: 30px;line-height: 30px;text-align: center;background-color: darkorange;border-radius: 5px;margin-left: 100px;font-weight: 700;}
+		</style>
+	</head>
+	<body>
+		<div class="msg_entering" style="margin-top: 0;">
+			<div class="wrap">
+				<div class="tishi">添加账号：</div>
+				<div class="msge_input_pos">
+					<input class="msg_input" id="zhanghao" placeholder="输入添加的账号"/>
+				</div>
+			</div>
+		</div>
+		<div class="msg_entering" style="margin-top: 10px;">
+			<div class="wrap">
+				<div class="tishi"></div>
+				<div class="msge_input_pos">
+					<input class="msg_input" id="mima" placeholder="输入添加账号的密码"/>
+				</div>
+			</div>
+		</div>
+		<div class="msg_entering" style="margin-top: 10px;">
+			<div class="sure_bind hand" id="sureAdd">确认添加</div>
+		</div>
+		<div class="msg_entering" style="margin-top: 0;">
+			<div class="wrap">
+				<div class="tishi">账号列表：</div>
+			</div>
+		</div>
+		<div id="wanbiaoArea">
+			<!--<div class="msg_entering1">
+				<div class="wrap">
+					<div class="tishi1">liangdong545658</div>
+					<div class="msge_input_pos">
+						<div class="msg_input1">删除</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+		<script type="text/javascript" src="jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript">
+			//验证是否登录
+		$.ajax({
+			url:config.url+"yly_api_controller/verify",
+			timeout : 20000, //超时时间设置，单位毫秒
+			contentType:'application/json;charset=utf-8',
+			type:"post",
+			dataType:"json",
+			beforeSend: function () {
+				
+			},
+			success:function(result){
+				console.log(result);
+				var status = result.code;
+				if(status == -10){
+					alert("请进行登录！！");
+					window.location.href="Login.html";
+				}
+				
+			}, 
+			complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+					// 启用按钮
+					$(".c_left_list").html("请求超时!");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					$(".c_left_list").html("请求失败，请检查网络连接是否正常！");
+			}
+		});
+			//账号查询
+			$.ajax({
+				url:config.url+"yly_api_controller/adminsearch",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					
+					var status = result.code;
+					if(status == 1){
+						var temp = result.data;
+						for(i=0;i<temp.length;i++){
+							var demo = "<div class='msg_entering1'>"+
+											"<div class='warp'>"+
+												"<div class='tishi1'>"+temp[i].username+"</div>"+
+												"<div class='msge_input_pos'>"+
+													"<div class='msg_input1' onclick='delet("+temp[i].id+")'>"+"删除"+"</div>"+
+												"</div>"+
+											"</div>"+
+									  "</div>";
+							$("#wanbiaoArea").append(demo);
+						}
+						console.log(result);
+					}else if(result.code == -1){
+						//展示查询结果
+						console.log(result);
+						
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						alert("请求超时，请检查网络");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					alert("请求失败，请检查网络连接是否正常！");
+				}
+			});
+			//删除函数
+			function delet(id){
+				var jsid ="{\"id\":\"" + id + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/deladmin",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:jsid,
+					beforeSend: function () {
+	        			
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("删除成功！");
+							window.location.reload();
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							console.log(result);
+							alert("删除失败！");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){
+	　　　　				if(status=='timeout'){
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+					}
+				});
+			}
+			//添加账号
+			$("#sureAdd").on("click",function(){
+				var js ="{\"username\":\"" + $("#zhanghao").val() + "\",\"password\":\"" + $("#mima").val() + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/addadmin",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:js,
+					beforeSend: function () {
+	        			$("#sureAdd").attr("disabled",true);
+        				$("#sureAdd").html("添加中");
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("添加成功！");
+							window.location.reload();
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							console.log(result);
+							alert("添加失败！");
+							$("#sureAdd").attr("disabled",false);
+        					$("#sureAdd").html("确认添加");
+						}else if(result.code == -5){
+							//展示查询结果
+							console.log(result);
+							alert("该账号已被使用，请核查！");
+							$("#sureAdd").attr("disabled",false);
+        					$("#sureAdd").html("确认添加");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+	　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	 　　　　　 				$("#sureAdd").attr("disabled",false);
+        					$("#sureAdd").html("确认添加");
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+						$("#sureAdd").attr("disabled",false);
+        				$("#sureAdd").html("确认添加");
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

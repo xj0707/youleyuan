@@ -1,0 +1,205 @@
+[ 2017-01-12T09:43:55+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/warning
+[ log ] c.cn/admin/yly_Api_Controller/warning [运行时间：0.089005s][吞吐率：11.24req/s] [内存消耗：3,665.31kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'warning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '24eb7250-b8ad-4d4d-ac88-fa8605c443a0',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->warning[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\wamp\www\ChildrenGardenLocate\thinkphp\library\think\db\Connection.php:282]
+
+---------------------------------------------------------------
+[ 2017-01-12T09:44:49+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/warning
+[ log ] c.cn/admin/yly_Api_Controller/warning [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：3,589.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'warning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '582e3fe9-ef79-4fc0-ad59-36cd64c366af',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->warning[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND (  lasttime < 1484185429 ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wifi` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `wifiname` FROM `wifi` WHERE  `iswarning` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND `a`.`wifiname` = 'wifi_4' [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-12T10:13:51+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/warning
+[ log ] c.cn/admin/yly_Api_Controller/warning [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：3,589.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'warning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '15d67946-afa5-46bf-ae59-07d949abcce9',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->warning[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND (  lasttime < 1484187171 ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wifi` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `wifiname` FROM `wifi` WHERE  `iswarning` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND `a`.`wifiname` = 'wifi_4' [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-12T11:23:37+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/warning
+[ log ] c.cn/admin/yly_Api_Controller/warning [运行时间：0.093005s][吞吐率：10.75req/s] [内存消耗：3,589.44kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'warning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '3fb4d8c2-45fd-476e-ab31-e660671b7b46',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->warning[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND (  lasttime < 1484191357 ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wifi` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `wifiname` FROM `wifi` WHERE  `iswarning` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`wbid`,`a`.`p_phone`,`a`.`wifiname`,`a`.`wifiMac`,`a`.`wifistrong`,`w`.`wifi_x`,`w`.`wifi_y` FROM `watch` `a` INNER JOIN `wifi` `w` ON `a`.`wifiname`=`w`.`wifiname` WHERE  `status` = 1  AND `a`.`wifiname` = 'wifi_4' [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-12T11:52:48+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/wbidsearch
+[ log ] c.cn/admin/yly_Api_Controller/wbidsearch [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：2,471.37kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'wbidsearch',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ade1ff1f-6154-49e5-aa3f-61cc45aa1965',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------816480062762835099103291',
+  'content-length' => '158',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->wbidsearch[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-12T11:53:02+08:00 ] 127.0.0.4 127.0.0.1 POST /admin/yly_Api_Controller/wbidsearch
+[ log ] c.cn/admin/yly_Api_Controller/wbidsearch [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：3,593.98kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\ChildrenGardenLocate\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'yly_Api_Controller',
+    2 => 'wbidsearch',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '52cfbcff-a864-446f-8aca-7ab8215dbbe7',
+  'user-agent' => 'PostmanRuntime/3.0.9',
+  'accept' => '*/*',
+  'host' => 'c.cn',
+  'cookie' => 'PHPSESSID=vn9uvr0ilg99s8vbl5ft92fev4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------605519850657836406790687',
+  'content-length' => '158',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\YlyApiController->wbidsearch[ D:\wamp\www\ChildrenGardenLocate\application\admin\controller\YlyApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+
+---------------------------------------------------------------

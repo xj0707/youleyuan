@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px" width="600px" align="center">
+    <tr>
+        <th>id</th>
+        <th>腕表编号</th>
+        <th>上传时间</th>
+        <th>有无wifi信息</th>
+    </tr>
+    {volist name="res" id="vo"}
+    <tr>
+        <td>{$vo.id}</td>
+        <td>{$vo.wbid}</td>
+        <td>{:date('Y-m-d H:i:s',$vo.up_ud_time)}</td>
+        <td>{$vo.is_wifi}</td>
+    </tr>
+    {/volist}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+[ 2017-04-05T11:38:29+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/login
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/login [运行时间：0.115006s][吞吐率：8.70req/s] [内存消耗：2,418.42kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ad501b07-58a6-40b3-949e-0b770c60ae33',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------592798001204796066180231',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '743679',
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->login[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-05T11:43:26+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：2,420.06kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '8d44e885-11ee-4d76-9a0c-cdb5235064bc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------880731363324270480287846',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-05T11:43:31+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：2,420.26kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '8268f1fa-df01-495b-8e6d-1dd79bc02655',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------040128687777691721708192',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-05T11:43:44+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.157009s][吞吐率：6.37req/s] [内存消耗：3,533.98kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '077bb55b-e944-43ca-b676-5e8a5903d430',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------713833064298022663666805',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

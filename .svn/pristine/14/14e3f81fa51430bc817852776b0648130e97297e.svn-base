@@ -1,0 +1,1020 @@
+[ 2017-04-18T15:02:20+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.516029s][吞吐率：1.94req/s] [内存消耗：2,547.27kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ VIEW ] D:\wamp\www\WebAdmin\public/../application/admin\view\app_api\ceshi.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:02:55+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：2,453.49kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'content-length' => '419',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+  '------WebKitFormBoundaryD0RTK1GhF0GHVj39
+Content-Disposition:_form-data;_name' => '&quot;id&quot;
+
+1
+------WebKitFormBoundaryD0RTK1GhF0GHVj39
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+13076050636
+------WebKitFormBoundaryD0RTK1GhF0GHVj39
+Content-Disposition: form-data; name=&quot;content&quot;
+
+
+------WebKitFormBoundaryD0RTK1GhF0GHVj39
+Content-Disposition: form-data; name=&quot;pic&quot;; filename=&quot;b.jpg&quot;
+Content-Type: image/jpeg
+
+',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.077005s][吞吐率：12.99req/s] [内存消耗：2,371.94kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:04:04+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：2,373.57kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'content-length' => '419',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+  '------WebKitFormBoundaryylZy9tHQA1dSBHLM
+Content-Disposition:_form-data;_name' => '&quot;id&quot;
+
+1
+------WebKitFormBoundaryylZy9tHQA1dSBHLM
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+13076050636
+------WebKitFormBoundaryylZy9tHQA1dSBHLM
+Content-Disposition: form-data; name=&quot;content&quot;
+
+
+------WebKitFormBoundaryylZy9tHQA1dSBHLM
+Content-Disposition: form-data; name=&quot;pic&quot;; filename=&quot;b.jpg&quot;
+Content-Type: image/jpeg
+
+',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:05:50+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：2,452.22kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:05:50+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：2,452.22kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:05:50+08:00 ] ::1 ::1 GET /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：2,451.59kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:05:59+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：2,454.14kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'content-length' => '419',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+  '------WebKitFormBoundary21Dz48bGw56HGg1X
+Content-Disposition:_form-data;_name' => '&quot;id&quot;
+
+1
+------WebKitFormBoundary21Dz48bGw56HGg1X
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+13076050636
+------WebKitFormBoundary21Dz48bGw56HGg1X
+Content-Disposition: form-data; name=&quot;content&quot;
+
+
+------WebKitFormBoundary21Dz48bGw56HGg1X
+Content-Disposition: form-data; name=&quot;pic&quot;; filename=&quot;b.jpg&quot;
+Content-Type: image/jpeg
+
+',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:06:29+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.166010s][吞吐率：6.02req/s] [内存消耗：2,741.59kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [4096]Object of class think\File could not be converted to boolean[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:179]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:07:14+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.066004s][吞吐率：15.15req/s] [内存消耗：2,742.12kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [4096]Object of class think\File could not be converted to boolean[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:179]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:08:08+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.148009s][吞吐率：6.76req/s] [内存消耗：3,945.27kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:08:19+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：4,126.61kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Class 'app\admin\controller\Image' not found[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:193]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:10:29+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.132007s][吞吐率：7.58req/s] [内存消耗：4,126.39kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Class 'think\Image' not found[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:193]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:11:14+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：4,126.37kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------26607130704172',
+  'content-length' => '82263',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Class 'think\Image' not found[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:193]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:13:12+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：2,453.81kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'content-length' => '440',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=9vf9dnt6acam01tiu5i97nmq21',
+)
+[ info ] [ PARAM ] array (
+  '------WebKitFormBoundaryLGgfrc9Ky3WVFnmO
+Content-Disposition:_form-data;_name' => '&quot;id&quot;
+
+1
+------WebKitFormBoundaryLGgfrc9Ky3WVFnmO
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+13076050636
+------WebKitFormBoundaryLGgfrc9Ky3WVFnmO
+Content-Disposition: form-data; name=&quot;content&quot;
+
+
+------WebKitFormBoundaryLGgfrc9Ky3WVFnmO
+Content-Disposition: form-data; name=&quot;pic&quot;; filename=&quot;AcroRd32.exe&quot;
+Content-Type: application/x-msdownload
+
+',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:13:24+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.115006s][吞吐率：8.70req/s] [内存消耗：3,966.33kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=---------------------------314751466313091',
+  'content-length' => '1547378',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:14:02+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,492.70kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------314751466313091',
+  'content-length' => '1547378',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:14:26+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.042003s][吞吐率：23.81req/s] [内存消耗：2,492.41kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22521244248113',
+  'content-length' => '89617',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-18T15:16:16+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：4,126.42kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22521244248113',
+  'content-length' => '89617',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [1]Class 'think\Image' not found[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:194]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:24:05+08:00 ] 127.0.0.1 127.0.0.1 POST /WebAdmin/public/index.php/admin/app_api/uploadpic
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/uploadpic [运行时间：0.275016s][吞吐率：3.64req/s] [内存消耗：4,109.48kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'uploadpic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/WebAdmin/api.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=g8es71rj7l7nkseib30ha8tc07',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22521244248113',
+  'content-length' => '89617',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'phone' => '13076050636',
+  'content' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->uploadpic[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `tourl`='149250024510875.png'  WHERE  `phone` = '13076050636' [ RunTime:0.041002s ]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:43:59+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/newstype
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/newstype [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：3,578.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'newstype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b9502b27-1a9e-4d33-a786-dee695ac02bd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------844941123800950534300443',
+  'content-length' => '273',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->newstype[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news_type` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT * FROM `news_type` ORDER BY id asc [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:57:16+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/newslist
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/newslist [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：3,586.22kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'newslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1d58bc53-be83-44fa-a43b-a441898d8d2f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------177131682335566836941743',
+  'content-length' => '380',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+  'type' => '1111',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->newslist[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `type` = 1111 ORDER BY id desc LIMIT 10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-18T15:57:46+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/newslist
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/newslist [运行时间：0.171009s][吞吐率：5.85req/s] [内存消耗：3,585.70kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'newslist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b05480e3-5262-4cdb-b0a6-319af5dd02bc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------582942278009961882656448',
+  'content-length' => '380',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+  'id' => '1',
+  'type' => '3654',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->newslist[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `type` = 3654 ORDER BY id desc LIMIT 10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

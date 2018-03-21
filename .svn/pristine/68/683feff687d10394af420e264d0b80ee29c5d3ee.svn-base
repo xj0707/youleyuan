@@ -1,0 +1,1783 @@
+[ 2017-04-01T11:20:22+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/verifycode
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/verifycode [运行时间：0.938053s][吞吐率：1.07req/s] [内存消耗：2,415.55kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'verifycode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f51e6739-6784-46e3-8b26-636fbb6f1b06',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------863561431558868856412222',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->verifycode[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:21:39+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/verifycode
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/verifycode [运行时间：0.339020s][吞吐率：2.95req/s] [内存消耗：2,337.44kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'verifycode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e5bd5573-c206-476f-ad30-dd62509e60f6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------178882897816761407801932',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->verifycode[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:29:46+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/login
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/login [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：2,336.55kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '3bade0dc-d74b-49da-b9ea-98650fbd42bc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------738314323699178079286337',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '743679',
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->login[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:29:56+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/login
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/login [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：2,336.55kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b173aaa1-febd-415a-b28c-55ac55fa838e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------220655876019328513703745',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->login[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:38:17+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.115007s][吞吐率：8.70req/s] [内存消耗：2,342.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e9de0f34-d890-4073-a0b5-832625f53b0b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------892887303708641368227849',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:38:47+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.103006s][吞吐率：9.71req/s] [内存消耗：2,342.38kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '94892e6e-58fe-46d6-9020-25b8dd8d33bf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------588258785362922039720237',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:40:11+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/first
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/first [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：2,501.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c6aaae42-e7dd-4988-babb-e251586a63b0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------142831930110665699692929',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:41:13+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.095005s][吞吐率：10.53req/s] [内存消耗：2,343.09kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '4bdf14c3-58cb-407d-9659-32a49d3d6bd9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------957360034536194968259815',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:41:31+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：2,343.11kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1f059ba5-d79f-4341-a8fd-df473306a36a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------349604054665591002192376',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:44:42+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,342.91kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e629cae3-3dfd-4e04-b620-f9709beff2a3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------670834034937900755375451',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:45:54+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：2,342.91kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '7d3dd0c3-e764-4f33-8076-9eca7cf9fff4',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------314030780098806862192902',
+  'content-length' => '165',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'code' => '570966',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:46:03+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：2,342.23kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '4544585a-e5dc-45d4-8c33-4393d4db4294',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:47:13+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.114007s][吞吐率：8.77req/s] [内存消耗：2,342.23kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a46e892f-b4c0-4d3e-8a59-9d8a39784698',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:49:17+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.077004s][吞吐率：12.99req/s] [内存消耗：2,342.18kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c59da887-473b-4778-be44-fd85b5320b4e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:50:00+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：2,342.73kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e7f8bb5b-e54a-4270-8c5d-34d2fc94fddf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T11:50:38+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.079005s][吞吐率：12.66req/s] [内存消耗：2,339.89kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '12f21b02-fac6-4827-aece-81a5db3a32b3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T12:15:58+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.113007s][吞吐率：8.85req/s] [内存消耗：2,338.63kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T12:16:19+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,342.41kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=qkqbpo3ufm2jln7pg75ius8196',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T12:16:39+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.093006s][吞吐率：10.75req/s] [内存消耗：2,342.90kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ba8d36e0-6eba-4ddc-9b21-68f557d0f7f0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T12:16:51+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：2,342.90kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a3e25086-8a7f-49f9-a38f-38ee50536d64',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T12:16:55+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/aa
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/aa [运行时间：0.049002s][吞吐率：20.41req/s] [内存消耗：2,342.41kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'aa',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=qkqbpo3ufm2jln7pg75ius8196',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->aa[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T14:10:33+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.142008s][吞吐率：7.04req/s] [内存消耗：3,607.84kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '7bd75b5b-f1c7-4998-908d-924f77099a35',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------456631409741425442069739',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+[ error ] [8]Trying to get property of non-object[D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php:81]
+
+---------------------------------------------------------------
+[ 2017-04-01T14:11:41+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.121007s][吞吐率：8.26req/s] [内存消耗：3,465.00kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '5cb32961-38eb-4253-b928-3deb5a502f01',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------206384177367955557762513',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T14:12:07+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：3,442.55kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c2a06924-5769-43f2-9508-c1cabd5a18e9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------401203989442752212285524',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T14:12:55+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.128007s][吞吐率：7.81req/s] [内存消耗：3,464.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '039324b6-afd4-47fb-ad75-3e3b6800a447',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------517390364972102298510547',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T15:49:16+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.164009s][吞吐率：6.10req/s] [内存消耗：3,482.94kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '666302ef-f95e-479d-802c-84ddbe11bef1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------222944426299602939455929',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T15:50:14+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.197011s][吞吐率：5.08req/s] [内存消耗：3,484.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '923c0758-6097-4517-be49-13adce478776',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------769727653512093109735091',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T15:50:24+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.095005s][吞吐率：10.53req/s] [内存消耗：2,369.23kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a8849986-be2f-4d34-92e0-b834f7a6e84c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------110115708686279150508832',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:50:55+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/lockwb
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/lockwb [运行时间：0.327019s][吞吐率：3.06req/s] [内存消耗：3,484.02kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'lockwb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c8818032-6fe7-434c-9749-94942709ae79',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------081119917720292160805150',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->lockwb[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `watchname` FROM `watchusage` WHERE  `w_phone` = '13076050636'  AND `state` = 0 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T15:55:52+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：2,373.82kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '214f620b-a11d-4821-80a4-8cacf3b0942d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------411139004880815021766745',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:55:59+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi1
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi1 [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,373.65kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'cf24c8d3-7dbc-44f9-b07d-5b143553074c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------168237970009495337996565',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi1[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:56:10+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi1
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi1 [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：2,373.61kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '75c1c9a6-7697-41aa-896a-95f35d1a7e0b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------616768914917247962345453',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi1[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:56:41+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.095005s][吞吐率：10.53req/s] [内存消耗：2,373.84kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'acc5ee1a-ca8e-4736-93c1-cba2b7869404',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------022631218411919242048368',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:56:46+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi1
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi1 [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：2,373.61kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '9d2a6710-2793-420c-8a9c-411c9a0202e6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------960310261234155510346169',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi1[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:57:04+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi1
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi1 [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：2,373.61kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '6e41819a-72ac-4c80-999d-41108554e83c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------682350130583613408824479',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13076050636',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi1[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:57:48+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.096006s][吞吐率：10.42req/s] [内存消耗：2,373.84kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '23e1daa3-1119-4be5-993c-4c15c1679be0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------895538624898029054463830',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '130760506',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:57:53+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/ceshi1
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi1 [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,373.72kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ed8df7c1-53f6-4bee-922d-ad2a82768958',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------438313304780829696576931',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '130760506',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi1[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:59:10+08:00 ] 127.0.0.1 127.0.0.1 GET /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：2,372.38kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T15:59:11+08:00 ] ::1 ::1 GET /WebAdmin/public/index.php/admin/app_api/ceshi
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/ceshi [运行时间：0.073004s][吞吐率：13.70req/s] [内存消耗：2,372.14kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'ceshi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=bea468505juo2ra04qojt9rc74',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->ceshi[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T18:14:34+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.061003s][吞吐率：16.39req/s] [内存消耗：2,419.13kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c5f8afc9-bf78-4c39-a895-647011f7146c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------126955949104212870254734',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-01T18:15:16+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：3,675.16kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '0a9f9fc9-d2cf-4c81-a008-c39d28f3930c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------006765039418544956783762',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.014001s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'phone' in 'where clause'[D:\wamp\www\WebAdmin\thinkphp\library\think\db\Connection.php:362]
+
+---------------------------------------------------------------
+[ 2017-04-01T18:17:05+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.115007s][吞吐率：8.70req/s] [内存消耗：3,555.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '01f5af7d-7a20-42ad-9108-ef3a4c25396f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------073770561989621436393849',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 22 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 23 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T18:21:04+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：3,543.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'fb6fa498-3ef1-4836-bc15-b2352c939057',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------502398406407788833948190',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 22 ORDER BY id desc LIMIT 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 23 ORDER BY id desc LIMIT 3 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T18:28:50+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：3,544.16kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'acbceba9-fd2a-498c-b008-18ee3ebea2fc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------011876296967549490099428',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 22 ORDER BY id desc LIMIT 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `watchlocation` WHERE  `watchusage_id` = 23 ORDER BY id desc LIMIT 3 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T18:29:36+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.094005s][吞吐率：10.64req/s] [内存消耗：3,541.18kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '41becf40-0c98-4d99-86ef-feeb15b407ce',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------149605693544125869237425',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `wifiname`,`wifimac` FROM `watchlocation` WHERE  `watchusage_id` = 22 ORDER BY id desc LIMIT 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `wifiname`,`wifimac` FROM `watchlocation` WHERE  `watchusage_id` = 23 ORDER BY id desc LIMIT 3 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-04-01T18:33:26+08:00 ] ::1 ::1 POST /WebAdmin/public/index.php/admin/app_api/movepath
+[ log ] localhost/WebAdmin/public/index.php/admin/app_api/movepath [运行时间：0.108006s][吞吐率：9.26req/s] [内存消耗：3,542.42kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'app_api',
+    2 => 'movepath',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'af30745a-19eb-474f-b24c-7071d48075ef',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'localhost',
+  'cookie' => 'PHPSESSID=2k2rtds6659mviv9uf938paa35',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------453387463037017014681193',
+  'content-length' => '171',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13688369875',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AppApi->movepath[ D:\wamp\www\WebAdmin\application\admin\controller\AppApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ChildrenGardenLocate;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchusage` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id`,`watchname` FROM `watchusage` WHERE  `w_phone` = '13688369875'  AND `state` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watchlocation` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `wifiname`,`wifimac` FROM `watchlocation` WHERE  `watchusage_id` = 22 ORDER BY id desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `wifiname`,`wifimac` FROM `watchlocation` WHERE  `watchusage_id` = 23 ORDER BY id desc LIMIT 10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

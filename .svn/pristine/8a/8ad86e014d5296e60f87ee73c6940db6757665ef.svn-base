@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	    html,body{height: 100%;}
+	    *{margin: 0;padding: 0;}
+		.map{width: 1500px;height: 1200px;background-image: url(img/childparkMap1.png);background-size: 100% 100%;}
+		/*.mapImg{display: block;position: relative;width: 1500px;height: 1200px;margin-left: auto ;margin-right: auto;}*/
+		.addWIFI{display: none;position: fixed;width: 500px;height: 350px;background-color: #A9A9A9;left: 300px;top: 50px;z-index: 100;opacity: .9;border-radius: 10px;}		
+		.msg_entering{width: 90%;height: 25px;position: relative;top: 40px;margin-left: 10%;margin-top: 10px;}	
+		.tishi{width: 100px;height: 25px;position: absolute;z-index: 1;left: 0;text-align: center;line-height: 25px;font-size: 18px;}
+		.msge_input_pos{width: 100%;height: 25px;position: absolute;}
+		.msg_input{margin-left:100px;height: 100%;width: 320px;outline: none;-webkit-appearance: none;border: 1px solid darkgrey ;border-radius: 5px;font-size: 16px;}
+		.wrap{width: 100%;position: relative;}
+		.sure_bind{font-weight: 700;width: 320px;height: 30px;line-height: 30px;text-align: center;background-color: darkorange;border-radius: 5px;margin-left: 100px;}
+		.icon{cursor: pointer;position: absolute;width: 30px;height: 30px;background-image: url(img/WIFIicon.png);background-size: 100% 100%;z-index: 10;}
+		.wifiguan{position: absolute; left: 20px;top: 20px;background-color: darkorange;border-radius: 2px;}
+	</style>
+	<body>
+		<!--<div class="icon"></div>-->
+		<div class="map" id="mapArea">
+			<div class="wifiguan">WIFI管理界面</div>
+			<!--<img class="mapImg" src="img/childparkMap1.png" />-->
+		</div>
+		<!--添加WIFI区域样式-->
+		<div class="addWIFI" id="addWIFI">
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI编号：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIbh" placeholder="输入WIFI编号"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">MAC地址：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFImac" placeholder="输入WIFI的mac地址"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI类型：</div>
+					<div class="msge_input_pos">
+						<select class="msg_input" id="WIFIlx">
+							<option value="0">普通WIFI</option>
+							<option value="1">预警WIFI</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI位置：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIwz" placeholder="输入位置名称"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">X轴值：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIx" placeholder="输入WIFI所在的X轴值"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">Y轴值：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIy" placeholder="输入WIFI所在的Y轴值"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering" style="margin-top: 15px;">
+				<div class="sure_bind hand" id="sureAdd">确认添加</div>
+			</div>
+		</div>
+		<!--展示WIFI信息区域-->
+		<div class="addWIFI" id="showWIFI">
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI编号：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIbhz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">MAC地址：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFImacz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI类型：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIlxz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">WIFI位置：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIwzz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">X轴值：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIxz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">Y轴值：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" id="WIFIyz" readonly placeholder=""/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering" style="margin-top: 15px;">
+				<div class="sure_bind hand" id="sureDele">确认删除</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript">
+			//验证是否登录
+		$.ajax({
+			url:config.url+"yly_api_controller/verify",
+			timeout : 20000, //超时时间设置，单位毫秒
+			contentType:'application/json;charset=utf-8',
+			type:"post",
+			dataType:"json",
+			beforeSend: function () {
+				
+			},
+			success:function(result){
+				console.log(result);
+				var status = result.code;
+				if(status == -10){
+					alert("请进行登录！！");
+					window.location.href="Login.html";
+				}
+				
+			}, 
+			complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+					// 启用按钮
+					$(".c_left_list").html("请求超时!");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					$(".c_left_list").html("请求失败，请检查网络连接是否正常！");
+			}
+		});
+			//$(".icon").css("left",200);
+			$("#mapArea").on("dblclick",function(event){
+				//获取鼠标点击的X,Y值
+				var e = event || window.event;
+	            var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+	            var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+	            var x = e.pageX || e.clientX + scrollX;
+	            var y = e.pageY || e.clientY + scrollY;
+	            $("#WIFIx").val(x);
+	            $("#WIFIy").val(y);
+	            $("#addWIFI").show();
+	            //alert('x: ' + x + '\ny: ' + y);
+			});
+			$("#mapArea").on("click",function(){
+				$("#addWIFI").hide();
+				$("#showWIFI").hide();
+			})
+			
+			//添加WIFI
+			$("#sureAdd").on("click",function(){
+				var js ="{\"wifiname\":\"" + $("#WIFIbh").val() + "\",\"wifiMac\":\"" + $("#WIFImac").val() + "\",\"type\":\"" + $("#WIFIlx").val() + "\",\"wifi_x\":\"" + $("#WIFIx").val() + "\",\"wifi_wz\":\"" + $("#WIFIwz").val() + "\",\"wifi_y\":\"" + $("#WIFIy").val() + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/addwifi",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:js,
+					beforeSend: function () {
+	        			$("#sureAdd").attr("disabled",true);
+        				$("#sureAdd").html("添加中");
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("添加成功！");
+							window.location.reload();
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							console.log(result);
+							alert("添加失败！");
+							$("#sureAdd").attr("disabled",false);
+        					$("#sureAdd").html("确认添加");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+	　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	 　　　　　 				$("#sureAdd").attr("disabled",false);
+        					$("#sureAdd").html("确认添加");
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+						$("#sureAdd").attr("disabled",false);
+        				$("#sureAdd").html("确认添加");
+					}
+				});
+			})
+			
+			//WIFI查询及展示
+			
+			$.ajax({
+				url:config.url+"yly_api_controller/wifisearch",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					console.log(result);
+					var status = result.code;
+					if(status == 1){
+						var temp = result.data;
+						for(i=0;i<temp.length;i++){
+							var X = temp[i].wifi_x - 15;
+							var Y = temp[i].wifi_y - 15;
+							var imgShow = "<div class='icon' onclick='showmsg("+temp[i].id+")' style='left:"+X+"px;top:"+Y+"px;'></div>";
+							$("#mapArea").append(imgShow);
+						}
+						
+							
+					}else if(result.code == -1){
+						//展示查询结果
+						alert("暂无WIFI信息！");
+						console.log(result);
+						
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						alert("请求超时，请检查网络");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					alert("请求失败，请检查网络连接是否正常！");
+				}
+			});
+			//展示函数
+			function showmsg(id){
+				var jsid2 ="{\"id\":\"" + id + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/wifiidsearch",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:jsid2,
+					beforeSend: function () {
+	        			
+	    			},
+					success:function(result){
+						
+						var status = result.code;
+						if(status == 1){
+							if(result.data.iswarning==0){
+								var isWarn = "普通WIFI";
+							}else if(result.data.iswarning==1){
+								var isWarn = "预警WIFI";
+							}
+							$("#WIFIbhz").val(result.data.wifiname);
+							$("#WIFIlxz").val(isWarn);
+							$("#WIFImacz").val(result.data.wifimac);
+							$("#WIFIwzz").val(result.data.wifi_wz);
+							$("#WIFIxz").val(result.data.wifi_x);
+							$("#WIFIyz").val(result.data.wifi_y);
+							//获取当前wifi的id用于删除操作
+							$("#sureDele").attr("wifi_id",id);
+							$("#showWIFI").show();
+							
+						}else if(result.code == -2||result.code == -1){
+							
+							alert("获取WIFI信息失败，请重试！");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){
+	　　　　				if(status=='timeout'){
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+					}
+				});
+			}
+			//删除函数
+			$("#sureDele").on("click",function(){
+				var delid = $("#sureDele").attr("wifi_id");
+				
+				var jsid ="{\"id\":\"" + delid + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/delwifi",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:jsid,
+					beforeSend: function () {
+	        			
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("删除成功！");
+							window.location.reload();
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							console.log(result);
+							alert("删除失败！");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){
+	　　　　				if(status=='timeout'){
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+					}
+				});
+			})
+			
+		</script>
+	</body>
+</html>

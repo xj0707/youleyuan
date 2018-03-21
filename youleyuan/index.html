@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>儿童公园智能腕表监管系统</title>
+	</head>
+	<link rel="stylesheet" href="css/mycss.css" />
+	<style>
+		html, body{height: 100%;}
+		* {margin:0; padding:0; list-style:none; font-family: "微软雅黑";} 
+		.qyujing{display: none;/*position: fixed;*/width: 500px;height: auto;background-color: #FF8C00;/*left: 300px;top: 200px;*/z-index: 100;opacity: .9;border-radius: 10px;position:relative;top: 20px;}
+		.zyujing{display: none;/*position: fixed;*/width: 500px;height: auto;background-color: red;/*left: 300px;top: 200px;*/z-index: 100;opacity: .9;border-radius: 10px;position:relative;top: 20px;}
+		.yujinglist{width: 90%;position: relative;left: 5%;height: 20px;margin-top: 6px;background-color: white;border-radius: 5px;}
+		.kongbai{width: 100%;height: 20px;}
+		.header{ width:100%;height:80px;background-image: url(img/bg_head.jpg);background-size: 100% 100%;} 
+		.h_top{width: 100%;height: 80px;position: absolute;left: 0;top: 0;}
+		.h_bottom{margin-left: 10%;width: 75%;height: 80px;position: absolute;left: 0;top: 0;z-index: 100;left: 0;top:15px}
+		.h_font{width: 80%;float: left;line-height: 200%;font-size: 25px;line-height: 80px;}
+		.h_exit{width: 20%;float: left;line-height: 300%;font-size: 16px;text-align: center;line-height: 80px;position: relative;z-index: 1000;}
+		.h_bottom_left{width: 250px;height: 100%;position:absolute; left:0;z-index:1}
+		.h_bottom_nav{width:100%; height:60px;position:absolute; left:0;}
+		.nav{height:80px;margin-left:250px;}
+		.nav_ul{width: 100%;height: 50px;}
+		.nav_ul li{float: left;width: 20%;text-align: center;position: relative;top: 20%;font-size: 18px;}
+		.wrapper {width: 100%;height: 85%;} 
+		.left {width:250px; height:85%;border-right:2px solid white;background-color: #BBE6FC;background-size: 100% 100%; position:absolute; left:0;z-index:1;} 
+		.c_left_search{width: 100%;height: 25%;border-bottom: 2px solid white;}
+		.input_serach{width: 90%;margin-left: 5%;height: 30px;top: 7%;position: relative;outline: none;-webkit-appearance: none;border: 1px solid black ;border-radius: 7px;font-size: 16px;text-align: center;}
+		.input_show{width: 90%;height: 50%;margin-top: 6%;margin-left: 5%;border: 1px solid dimgray;}
+		.input_show li{margin-left: 5%;}
+		.c_left_list{width: 90%;height: 100%;margin-left: 5%;overflow-y: auto;}
+		p{display: block;width: 50%;float: left;text-align: center;}
+		.right {width:100%; height:85%;background:cornflowerblue; position:absolute; left:0;} 
+		.content {height:100%;margin-left:252px;} 
+		.showContent{width: 100%;height: 100%;background-image: url(img/bg_content.jpg);background-size: 100% 100%;border: 0;}
+		a:link{
+			text-decoration: none;
+			color: black;
+			}
+			a:visited{
+				text-decoration: none;
+				color: black;
+			}
+			a:hover{
+				text-decoration: none;
+				
+				color:white;
+			}
+			a:active{
+				text-decoration: none;
+				color: white;
+			}
+			.button_li{
+				width: 100px;height: 30px;background-color: #ADD8E6;border-radius: 5px;
+			}
+			.yjxxButton{position: absolute;width: 20px;height: 90px;background-color: orange;top: 70%;z-index: 200;}
+			.yjxxArea{display: none;position: fixed;width: 500px;height: 60%;background-color: oldlace;top: 40%;z-index: 200;}
+			.yjxxClose{width: 100%;height: 25px;line-height: 25px;text-align: right;background-color: darkslategray;color: white;}
+			.kuang{border: 1px solid darkgray;height: 20px;line-height: 20px;font-size: 15px;text-align: center;margin-top: 20px;}
+	</style> 
+</head> 
+<body> 
+	<div class="yjxxButton hand">预警信息</div>
+	<div class="yjxxArea">
+		<div class="yjxxClose hand">关闭&nbsp;&nbsp;&nbsp;</div>
+		<div class="zyujing drag">
+			
+	</div>
+	<div class="qyujing drag">
+	</div>
+	</div>
+	<div class="header"> 
+		<div class="h_top">
+			<div class="h_font">儿童公园定位管理平台</div>
+			<div class="h_exit"><span class="hand" id="exit">退出登录</span></div>
+		</div>
+		<div class="h_bottom">
+			<div class="h_bottom_left"></div>
+			<div class="h_bottom_nav">
+				<div class="nav">
+					<ul class="nav_ul">
+						<li><div class="button_li"><a href="map.html" target="showContent">首页</a></div></li>
+						<li><div class="button_li"><a href="watchBind.html" target="showContent">腕表绑定</a></div></li>
+						<li><div class="button_li"><a href="watchUnbind.html" target="showContent"><span id="onjiebang">腕表解绑</span></a></div></li>
+						<li><div class="button_li"><a href="map.html" target="showContent">腕表定位</a></div></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper"> 
+		<div class="left"> 
+			<!--<div class="c_left_search">
+				<input class="input_serach" id="search_index" placeholder="输入编号后回车键搜索" />
+				<div class="input_show hand" id="msg_area">
+					<li id="bianhao"></li>
+					<li id="weizhi"></li>
+					<li id="dianhua">搜索结果展示区域</li>
+				</div>
+			</div>-->
+			<div class="c_left_list">
+				
+			</div>
+		</div> 
+		<div class="right"> 
+			<div class="content"> 
+				<iframe id="ifromeContent" class="showContent" name="showContent" src="map.html" ></iframe>
+			</div> 
+		</div>
+	</div> 
+	
+	<audio id="video1" width="1" height="1">
+	    <source src="css/zyj.mp3" type="audio/mp3" />
+	</audio>
+	<audio id="video2" width="1" height="1">
+	    <source src="css/qyj.mp3" type="audio/mp3" />
+	</audio>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript">
+		$(".yjxxButton").on("click",function(){
+			$(".yjxxButton").hide();
+			$(".yjxxArea").slideDown();
+			
+		})
+		$(".yjxxClose").on("click",function(){
+			
+			$(".yjxxArea").slideUp();
+			$(".yjxxButton").show();
+			
+		})
+//		var move=false;//移动标记 
+//		
+//		var WZX = localStorage.getItem("weizhiX");
+//		var WZY = localStorage.getItem("weizhiY");
+//		var drag = document.getElementsByClassName('drag');
+//			drag[0].style.top = WZY+"px";
+//			drag[0].style.left = WZX+"px";
+//			drag[1].style.top = WZY+"px";
+//			drag[1].style.left = WZX+"px";
+//		var _x,_y;//鼠标离控件左上角的相对位置 
+//		$(".drag").mousedown(function(e){ 
+//			//alert(1);
+//			move=true; 
+//			_x=(e.pageX-parseInt($(".drag").css("left")))||e.clientX; 
+//			_y=(e.pageY-parseInt($(".drag").css("top")))||e.clientY; 
+//		}); 
+//		$(document).mousemove(function(e){ 
+//			if(move){ 
+//				var x=(e.pageX-_x)||e.clientX;//控件左上角到屏幕左上角的相对位置 
+//				var y=(e.pageY-_y)||e.clientY; 
+//				console.log(x);
+//				$(".drag").css({"top":y,"left":x});
+//				localStorage.setItem("weizhiX",x);
+//				localStorage.setItem("weizhiY",y);
+//			} 
+//		})
+//		$(".drag").mouseup(function(e){
+//			 move=false;
+//		})
+//		
+		//验证是否登录
+		$.ajax({
+			url:config.url+"yly_api_controller/verify",
+			timeout : 20000, //超时时间设置，单位毫秒
+			contentType:'application/json;charset=utf-8',
+			type:"post",
+			dataType:"json",
+			beforeSend: function () {
+				
+			},
+			success:function(result){
+				console.log(result);
+				var status = result.code;
+				if(status == -10){
+					alert("请进行登录！！");
+					window.location.href="Login.html";
+				}
+				
+			}, 
+			complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+					// 启用按钮
+					$(".c_left_list").html("请求超时!");
+　　　　				}
+　　				},
+				error:function(){
+//					console.log(arguments);
+//					$(".c_left_list").html("请求失败，请检查网络连接是否正常！");
+			}
+		});
+		$("#onjiebang").on("click",function(){
+			localStorage.removeItem("wbid");
+		})
+		//点击搜索的结果进入详情（解绑）页面
+		//alert($("#bianhao").html().substring(3));
+		
+		$("#msg_area").on("click",function(){
+			localStorage.setItem("wbid", $("#bianhao").html().substring(3));
+			$("#ifromeContent").attr("src","watchUnbind.html");
+		})
+		//enter键搜索结果展示
+		$("#search_index").on("keyup",function(event){
+			var event = event || window.event; 
+		    if(event.keyCode==13){
+		    	var js = "{\"wbid\":\"" + $("#search_index").val() + "\"}";
+		    	$.ajax({
+					url:config.url+"yly_api_controller/wbsearch",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:js,
+					beforeSend: function () {
+	        			
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("此腕表暂未绑定，请核对编号！");
+						}else if(result.code == 2){
+							//展示查询结果
+							$("#search_index").val("");
+							$("#bianhao").html("编号："+result.data.wbid);
+							$("#weizhi").html("位置："+result.data.wifi_wz);
+							$("#dianhua").html("电话："+result.data.p_phone);
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							alert("未查询到此腕表信息，请核对编号！");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+	　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	 　　　　　 				
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+					}
+				});
+		    }
+		})
+		//退出登录
+		$("#exit").on("click",function(){
+			$.ajax({
+				url:config.url+"yly_api_controller/outlogin",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					console.log(result);
+					var status = result.code;
+					if(status == 1){
+						window.location.href="Login.html";
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						$(".c_left_list").html("请求超时!");
+　　　　				}
+　　				},
+				error:function(){
+//					console.log(arguments);
+//					$(".c_left_list").html("请求失败，请检查网络连接是否正常！");
+				}
+			});
+			
+		});
+		
+		//		//绑定腕表信息展示
+		$.ajax({
+				url:config.url+"yly_api_controller/wbstatesearch",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					console.log(result);
+					var status = result.code;
+					if(status == 1){
+						var tempindex = result.data1;
+						//var temp2 = result.data2;
+						if(tempindex.length==0){
+							$(".c_left_list").html("<div class='kuang'>暂无绑定腕表信息</div>");
+						}else if(tempindex.length!=0){
+							$(".c_left_list").html("<div class='kuang'>绑定腕表信息列表：</div>");
+						}
+						for(i=0;i<tempindex.length;i++){
+							var subswbid = tempindex[i].wbid.substring(8);
+							var demoindex = "<p>"+subswbid+"</p>"+
+										"<p>"+tempindex[i].p_phone+"</p>";
+							$(".c_left_list").append(demoindex);
+						}
+					}else if(result.code == -1){
+						//展示查询结果
+						console.log(result);
+						
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						$(".c_left_list").html("请“F5”刷新页面重试！");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					$(".c_left_list").html("请检查网络连接是否正常！");
+				}
+			});
+		setInterval(function(){
+		//腕表查询
+			$.ajax({
+				url:config.url+"yly_api_controller/wbstatesearch",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					console.log(result);
+					var status = result.code;
+					if(status == 1){
+						var tempindex = result.data1;
+						//var temp2 = result.data2;
+						if(tempindex.length==0){
+							$(".c_left_list").html("<div class='kuang'>暂无绑定腕表信息</div>");
+						}else if(tempindex.length!=0){
+							$(".c_left_list").html("<div class='kuang'>绑定腕表信息列表：</div>");
+						}
+						for(i=0;i<tempindex.length;i++){
+							var subswbid = tempindex[i].wbid.substring(8);
+							var demoindex = "<p>"+subswbid+"</p>"+
+										"<p>"+tempindex[i].p_phone+"</p>";
+							$(".c_left_list").append(demoindex);
+						}
+					}else if(result.code == -1){
+						//展示查询结果
+						console.log(result);
+						
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						$(".c_left_list").html("请“F5”刷新页面重试！");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					$(".c_left_list").html("请检查网络连接是否正常！");
+				}
+			});
+		},30000)
+		//轮询检索报警信号
+		setInterval(function(){
+			
+			$.ajax({
+				url:config.url+"yly_api_controller/warning",
+				timeout : 10000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				beforeSend: function () {
+					
+    			},
+				success:function(result){
+					console.log(result);
+					var status = result.code;
+					if(status == 1){
+						var putong = result.data1;
+						var yanzhong = result.data2;
+						if(putong.length!=0){
+							
+							//普通预警
+							var myaudioz=document.getElementById("video2");
+							myaudioz.play();
+							$(".qyujing").html("");
+							for(i=0;i<yanzhong.length;i++){
+								var demo = "<div class='yujinglist'>预警腕表："+yanzhong[i].wbid+"</div>"+
+								           "<div class='yujinglist'>家长电话："+yanzhong[i].p_phone+"</div>"+
+								           "<div class='yujinglist'>WIFI信息："+yanzhong[i].wifiname+"</div>"+
+								           "<div class='yujinglist'>"+yanzhong[i].wifiMac+"|"+yanzhong[i].wifistrong+"</div>"+
+								           "<div class='yujinglist'>最后X，Y坐标："+yanzhong[i].wifi_x+"，"+yanzhong[i].wifi_y+"</div>"+
+								           "<div class='yujinglist'>最后位置信息："+yanzhong[i].wifi_wz+"</div>"+
+								           "<div class='kongbai'></div>";
+								$(".qyujing").append(demo);
+								$(".zyujing").hide();
+								$(".qyujing").show();
+							}
+						}else if(yanzhong.length!=0){
+							//严重预警
+							var myaudio=document.getElementById("video1");
+							myaudio.play();
+							$(".zyujing").html("");
+							for(i=0;i<yanzhong.length;i++){
+								var demo = "<div class='yujinglist'>预警腕表："+yanzhong[i].wbid+"</div>"+
+								           "<div class='yujinglist'>家长电话："+yanzhong[i].p_phone+"</div>"+
+								           "<div class='yujinglist'>WIFI信息："+yanzhong[i].wifiname+"</div>"+
+								           "<div class='yujinglist'>"+yanzhong[i].wifiMac+"|"+yanzhong[i].wifistrong+"</div>"+
+								           "<div class='yujinglist'>最后X，Y坐标："+yanzhong[i].wifi_x+"，"+yanzhong[i].wifi_y+"</div>"+
+								           "<div class='yujinglist'>最后位置信息："+yanzhong[i].wifi_wz+"</div>"+
+								           "<div class='kongbai'></div>";
+								$(".zyujing").append(demo);
+								$(".qyujing").hide();
+								$(".zyujing").show();
+							}
+						}
+						if(putong.length!=0 && yanzhong.length!=0){
+							//严重预警
+							var myaudio=document.getElementById("video1");
+							myaudio.play();
+							$(".zyujing").html("");
+							for(i=0;i<yanzhong.length;i++){
+								var demo = "<div class='yujinglist'>预警腕表："+yanzhong[i].wbid+"</div>"+
+								           "<div class='yujinglist'>家长电话："+yanzhong[i].p_phone+"</div>"+
+								           "<div class='yujinglist'>WIFI信息："+yanzhong[i].wifiname+"</div>"+
+								           "<div class='yujinglist'>"+yanzhong[i].wifiMac+"|"+yanzhong[i].wifistrong+"</div>"+
+								           "<div class='yujinglist'>最后X，Y坐标："+yanzhong[i].wifi_x+"，"+yanzhong[i].wifi_y+"</div>"+
+								           "<div class='yujinglist'>最后位置信息："+yanzhong[i].wifi_wz+"</div>"+
+								           "<div class='kongbai'></div>";
+								$(".zyujing").append(demo);
+								$(".qyujing").hide();
+								$(".zyujing").show();
+							}
+							//混合预警
+						}else if(putong.length==0&&yanzhong.length==0){
+							//无预警
+							$(".qyujing").hide();
+							$(".zyujing").hide();
+						}
+					}
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+				}
+			});
+		},10000)
+	</script>
+</body> 
+</html> 

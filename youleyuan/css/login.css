@@ -1,0 +1,126 @@
+.lgArea{
+	width: 400px;
+	height: 400px;
+	background-color: rgb(255,255,255);
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	/*background-color: red;*/
+}
+.Ltitle{
+	width: 600px;
+	height: 100px;
+	/*background-color: rgb(255,255,255);*/
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	background-image: url(../img/title.jpg);
+	background-size: 100% 100%;
+	z-index: 100;
+}
+.line{
+	width: 350px;
+	position: relative;
+	left: 25px;
+	top: 70px;
+	border: 1px solid #939393;
+	
+}
+.line2{
+	width: 350px;
+	position: relative;
+	left: 25px;
+	top: 220px;
+	border: 1px solid #939393;
+	
+}
+.denglufont{
+	width: 80px;
+	background-color: rgb(255,255,255);
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	z-index: 100;
+	top: 55px;
+	left: 80px;
+}
+.inputArea1{
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	
+	position: relative;
+	left: 50px;
+	top: 130px;
+}
+.inputArea2{
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	
+	position: relative;
+	left: 50px;
+	top: 160px;
+}
+.inputK{
+	width: 240px;
+	height: 20px;
+}
+.dengluBtn{
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: rgb(0,143,215);
+	position: relative;
+	left: 50px;
+	top: 190px;
+	color: white;
+	border-radius: 5px;
+}
+.dengluBtnNo{
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #939393;
+	position: relative;
+	left: 50px;
+	top: 190px;
+	color: white;
+	border-radius: 5px;
+}
+.zhuce{
+	position: relative;
+	left: 60px;
+	top: 200px;
+	font-size: 14px;
+}
+.wangji{
+	position: relative;
+	left: 260px;
+	top: 182px;
+	font-size: 14px;
+}
+.qita{
+	position: relative;
+	left: 50px;
+	top: 230px;
+}
+.qq{
+	position: relative;
+	left: 170px;
+	top: 240px;
+	width: 50px;
+	height: 50px;
+	
+}
+.weixin{
+	position: relative;
+	left: 260px;
+	top: 190px;
+	width: 50px;
+	height: 50px;
+	
+}
+

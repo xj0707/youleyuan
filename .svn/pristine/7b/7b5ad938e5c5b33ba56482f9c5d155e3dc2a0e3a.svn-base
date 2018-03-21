@@ -1,0 +1,42 @@
+<?php
+$a='123';
+$arr=explode(',',$a);
+var_dump($arr);
+echo $str=<<<STR
+<form action="./public/index.php/admin/yly_api_controller/news" enctype="multipart/form-data" method="post">
+<input type="text" name="title"/><br>
+<input type="text" name="describle"/><br>
+<input type="text" name="content"/><br>
+<input type="file" name="image" /> <br>
+<input type="submit" value="上传" />
+</form>
+STR;
+exit;
+set_time_limit(0);
+$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)or die("Could not create    socket\n"); // 创建一个Socket
+
+$connection = socket_connect($socket, 'nc.galbs.cn', 2048) or die("Could not connet server\n");    //  连接
+
+//init
+//$verifycode=Lowermd5('YW*861900039990378*0005*003A*INITmybhkj@ncyely@wyy_20170102150500');
+//echo $msg="[YW*861900039990378*0005*003A*INIT,,0,D10_MYHB_V0.1.1345.1520,0000,0000,$verifycode]";
+
+//lk
+$verifycode=Lowermd5('YW*861900039990378*0004*0017*LKmybhkj@ncyely@wyy_20170102150500');
+$msg="[YW*861900039990378*0004*0017*LK,100,$verifycode]";
+
+//ud
+//$verifycode=Lowermd5('YW*861900039990378*0003*0097*UDmybhkj@ncyely@wyy_20170102150500');
+//$msg="[YW*861900039990378*0003*0097*UD,310516,162747,V,0.000000,N,0.000000,E,0.00,0.0,0.0,0,87,100,0,0:0,00000000,3,1,460,0,20681,13942,27,20681,59883,17,20681,11752,17,0,$verifycode]";
+
+socket_write($socket, $msg) or die("Write failed\n"); // 数据传送 向服务器发送消息
+while ($buff = @socket_read($socket, 1024, PHP_NORMAL_READ)) {
+	echo("Response was:" . $buff . "\n");
+		
+}
+socket_close($socket);
+//获取小写16为MD5加密
+function Lowermd5($str){
+	$p_str=md5($str);
+	return substr($p_str,8,16);
+}

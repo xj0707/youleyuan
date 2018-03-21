@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/mycss.css" />
+		<style type="text/css">
+			html,body{width:100%;height: 100%;}
+	    	*{margin: 0;padding: 0;font-family: "微软雅黑";}
+	    	.msg_entering{width: 60%;height: 25px;position: relative;top: 40px;margin-left: 300px;margin-top: 15px;}	
+			.tishi{width: 100px;height: 25px;position: absolute;z-index: 1;left: 0;text-align: center;line-height: 25px;font-size: 18px;}
+			.msge_input_pos{width: 100%;height: 25px;position: absolute;}
+			.msg_input{margin-left:100px;height: 100%;width: 320px;outline: none;-webkit-appearance: none;border: 1px solid darkgrey ;border-radius: 5px;font-size: 16px;}
+			.wrap{width: 100%;position: relative;}
+			.avator{margin-left: 100px;width: 320px;height: 240px;border:1px solid#A9A9A9;background-color: white}
+			.sure_bind{font-weight: 700;width: 320px;height: 30px;line-height: 30px;text-align: center;background-color: darkorange;border-radius: 5px;margin-left: 100px;}
+			.searchId{width: 340px;height: 25px;}
+			.showHide{display: none;position:relative;top: 20px;}
+			.img{width: 100%;height: 100%;background-size: 100% 100%;}
+		</style>
+	</head>
+	<body>
+		<div class="msg_entering" style="margin-top: 0;">
+			<!--<input class="searchId" placeholder="输入腕表编号" />-->
+			<div class="wrap">
+				<div class="tishi">解绑编号：</div>
+				<div class="msge_input_pos">
+					<input class="msg_input" id="search_id" placeholder="输入腕表编号后回车键进行搜索"/>
+				</div>
+			</div>
+		</div>
+		<div class="showHide">
+			<div class="msg_entering">
+				<div class="tishi" style="color: orangered;width: 340px;text-align: left;">&nbsp;搜索结果>>>></div>
+				
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">腕表编号：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" style="border: 0;" id="showid" readonly value="无搜索结果"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">家长电话：</div>
+					<div class="msge_input_pos">
+						<input class="msg_input" style="border: 0;" id="showphone" readonly value="无搜索结果"/>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering">
+				<div class="wrap">
+					<div class="tishi">家长照片：</div>
+					<div class="msge_input_pos">
+						<div class="avator"><img id="showimg" class="img" src=""/></div>
+					</div>
+				</div>
+			</div>
+			<div class="msg_entering" style="margin-top: 230px;">
+				<div class="sure_bind hand" id="sureUnbind">确认解绑</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript">
+			//验证是否登录
+		$.ajax({
+			url:config.url+"yly_api_controller/verify",
+			timeout : 20000, //超时时间设置，单位毫秒
+			contentType:'application/json;charset=utf-8',
+			type:"post",
+			dataType:"json",
+			beforeSend: function () {
+				
+			},
+			success:function(result){
+				console.log(result);
+				var status = result.code;
+				if(status == -10){
+					alert("请进行登录！！");
+					window.location.href="Login.html";
+				}
+				
+			}, 
+			complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+					// 启用按钮
+					$(".c_left_list").html("请求超时!");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					$(".c_left_list").html("请求失败，请检查网络连接是否正常！");
+			}
+		});
+			//enter键搜索结果展示
+			var wbId = 0;
+			var bianhao = localStorage.getItem("wbid");
+			$("#search_id").val(bianhao);
+			
+			if($("#search_id").val()==""){
+				$("#search_id").on("keyup",function(event){
+					var js1 = "{\"wbid\":\"" + $("#search_id").val() + "\"}";
+					var event = event || window.event; 
+				    if(event.keyCode==13){
+				    	$.ajax({
+							url:config.url+"yly_api_controller/wbsearch",
+							timeout : 20000, //超时时间设置，单位毫秒
+							contentType:'application/json;charset=utf-8',
+							type:"post",
+							dataType:"json",
+							//json: "callbackparam",
+							data:js1,
+							beforeSend: function () {
+			        			
+			    			},
+							success:function(result){
+								//console.log('msg'+data);
+								//var result = JSON.parse(data);
+								var status = result.code;
+								if(status == 1){
+									alert("此腕表暂未绑定，请核对编号！");
+								}else if(result.code == 2){
+									//展示查询结果
+									wbId = result.data.wbid;
+									$("#showid").val(result.data.wbid);
+									$("#showphone").val(result.data.p_phone);
+									$("#showimg").attr("src",result.data.p_picurl);
+									$(".showHide").show();
+								}else if(result.code == -2||result.code == -1){
+									//展示查询结果
+									alert("未查询到此编号腕表的相关信息！");
+								}
+								
+							}, 
+							complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+			　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+									// 启用按钮
+									alert("请求超时，请检查网络");
+			 　　　　　 				
+			　　　　				}
+			　　				},
+							error:function(){
+								console.log(arguments);
+								alert("请求失败，请检查网络连接是否正常！");
+							}
+						});
+				    }
+				})
+			}else if($("#search_id").val()!=""){
+				//alert($("#search_id").val());
+				var js1 = "{\"wbid\":\"" + $("#search_id").val() + "\"}";
+				$.ajax({
+					url:config.url+"yly_api_controller/wbsearch",
+					timeout : 20000, //超时时间设置，单位毫秒
+					contentType:'application/json;charset=utf-8',
+					type:"post",
+					dataType:"json",
+					//json: "callbackparam",
+					data:js1,
+					beforeSend: function () {
+	        			
+	    			},
+					success:function(result){
+						//console.log('msg'+data);
+						//var result = JSON.parse(data);
+						var status = result.code;
+						if(status == 1){
+							alert("此腕表暂未绑定，请核对编号！");
+						}else if(result.code == 2){
+							//展示查询结果
+							wbId = result.data.wbid;
+							$("#showid").val(result.data.wbid);
+							$("#showphone").val(result.data.p_phone);
+							$("#showimg").attr("src",result.data.p_picurl);
+							$(".showHide").show();
+						}else if(result.code == -2||result.code == -1){
+							//展示查询结果
+							alert("未查询到此编号腕表的相关信息！");
+						}
+						
+					}, 
+					complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+	　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+							// 启用按钮
+							alert("请求超时，请检查网络");
+	 　　　　　 				
+	　　　　				}
+	　　				},
+					error:function(){
+						console.log(arguments);
+						alert("请求失败，请检查网络连接是否正常！");
+					}
+				});
+			}
+			
+			//腕表解绑
+		$("#sureUnbind").click(function(){
+			var js2 = "{\"wbid\":\"" + wbId + "\"}";
+			$.ajax({
+				url:config.url+"yly_api_controller/wbunwrap",
+				timeout : 20000, //超时时间设置，单位毫秒
+				contentType:'application/json;charset=utf-8',
+				type:"post",
+				dataType:"json",
+				//json: "callbackparam",
+				data:js2,
+				beforeSend: function () {
+        			// 禁用按钮防止重复提交
+        			$("#sureUnbind").attr("disabled",true);
+        			$("#sureUnbind").html("提交中...");
+    			},
+				success:function(result){
+					
+					//console.log('msg'+data);
+					//var result = JSON.parse(data);
+					var status = result.code;
+					if(status == -1||status == -2||status == -3||status == -4){
+						alert("解绑失败！请重新提交！");
+						$("#sureUnbind").attr("disabled",false);
+        				$("#sureUnbind").html("确认解绑");
+					}else if(result.code == 1){
+						//console.log(data.num);
+						alert("解绑成功！");
+						window.location.reload();
+					}
+					
+				}, 
+				complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+　　　　				if(status=='timeout'){//超时,status还有success,error等值的情况
+						// 启用按钮
+						alert("请求超时，请检查网络");
+ 　　　　　 				$("#sureUnbind").attr("disabled",false);
+        				$("#sureUnbind").html("确认解绑");
+　　　　				}
+　　				},
+				error:function(){
+					console.log(arguments);
+					alert("请求失败，请检查网络连接是否正常！");
+					$("#sureUnbind").attr("disabled",false);
+        			$("#sureUnbind").html("确认解绑");
+				}
+			});
+		});
+		</script>
+	</body>
+</html>
